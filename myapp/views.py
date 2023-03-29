@@ -34,6 +34,9 @@ def findbus(request):
             else:
                 context["error"] = "Sorry no buses availiable at that time"
                 return render(request, 'myapp/findbus.html', context)
+        else:
+            context["error"] = "Sorry no buses availiable at that time"
+            return render(request, 'myapp/findbus.html', context)
     else:
         return render(request, 'myapp/findbus.html')
 
